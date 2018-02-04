@@ -3,8 +3,8 @@ class Dollar {
 
   Dollar(this.amount);
 
-  Dollar times(num multipiler) {
-    return new Dollar(amount * multipiler);
+  Dollar times(num multiplier) {
+    return new Dollar(amount * multiplier);
   }
 
   bool operator ==(Object object) {
