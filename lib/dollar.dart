@@ -3,7 +3,7 @@ class Dollar {
 
   Dollar(this.amount);
 
-  void times(num multipiler) {
-    amount *= multipiler;
+  Dollar times(num multipiler) {
+    return new Dollar(amount * multipiler);
   }
 }

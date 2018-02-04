@@ -4,7 +4,9 @@ import 'package:test/test.dart';
 void main() {
   test('multiplication', () {
     var five = new Dollar(5);
-    five.times(2);
-    expect(five.amount, 10);
+    var product = five.times(2);
+    expect(product.amount, 10);
+    product = five.times(3);
+    expect(product.amount, 15);
   });
 }
