@@ -1,13 +1,13 @@
 class Franc {
-  num amount;
+  num _amount;
 
-  Franc(this.amount);
+  Franc(this._amount);
 
   Franc times(num multiplier) {
-    return new Franc(amount * multiplier);
+    return new Franc(_amount * multiplier);
   }
 
   bool operator == (Object object) {
-    return (object is Franc) && (amount == object.amount);
+    return (object is Franc) && (_amount == object._amount);
   }
 }

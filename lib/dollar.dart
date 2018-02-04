@@ -1,13 +1,13 @@
 class Dollar {
-  num amount;
+  num _amount;
 
-  Dollar(this.amount);
+  Dollar(this._amount);
 
   Dollar times(num multiplier) {
-    return new Dollar(amount * multiplier);
+    return new Dollar(_amount * multiplier);
   }
 
   bool operator ==(Object object) {
-    return (object is Dollar) && (amount == object.amount);
+    return (object is Dollar) && (_amount == object._amount);
   }
 }
