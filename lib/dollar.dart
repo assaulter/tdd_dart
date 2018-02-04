@@ -7,8 +7,7 @@ class Dollar {
     return new Dollar(amount * multipiler);
   }
 
-  bool equals(Object object) {
-    Dollar dollar = object;
-    return amount == dollar.amount;
+  bool operator ==(Object object) {
+    return (object is Dollar) && (amount == object.amount);
   }
 }

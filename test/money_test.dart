@@ -4,13 +4,13 @@ import 'package:test/test.dart';
 void main() {
   test('multiplication', () {
     var five = new Dollar(5);
-    var product = five.times(2);
-    expect(product.amount, 10);
-    product = five.times(3);
-    expect(product.amount, 15);
+    
+    expect(new Dollar(10), equals(five.times(2)));
+    expect(new Dollar(15), equals(five.times(3)));
   });
 
   test('equality', () {
-    expect(new Dollar(5).equals(new Dollar(5)), true);
+    expect(new Dollar(5) == (new Dollar(5)), isTrue);
+    expect(new Dollar(5) == (new Dollar(6)), isFalse);
   });
 }
