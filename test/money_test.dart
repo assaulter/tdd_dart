@@ -20,6 +20,10 @@ void main() {
     expect(new Franc(5) == (new Franc(6)), isFalse);
   });
 
+  test('equality', () {
+    expect(new Franc(5) == new Dollar(5), isFalse);
+  });
+
   test('franc multiplication', () {
     var five = new Franc(5);
 
