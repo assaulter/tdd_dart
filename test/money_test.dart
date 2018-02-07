@@ -29,4 +29,9 @@ void main() {
     expect(Money.franc(10), equals(five.times(2)));
     expect(Money.franc(15), equals(five.times(3)));
   });
+
+  test('currency', () {
+    expect(Money.dollar(1).currency, equals('USD'));
+    expect(Money.franc(1).currency, equals('CHF'));
+  });
 }
