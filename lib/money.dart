@@ -3,8 +3,9 @@ import 'package:tdd_dart/franc.dart';
 
 abstract class Money {
   num amount;
+  String currency;
 
-  Money(this.amount);
+  Money(this.amount, this.currency);
 
   times(num multiplier);
 
@@ -12,7 +13,7 @@ abstract class Money {
     return (object is Money) && (this.runtimeType == object.runtimeType) && (amount == object.amount);
   }
 
-  static Money dollar(amount) => new Dollar(amount);
+  static Money dollar(amount) => new Dollar(amount, 'USD');
 
-  static Franc franc(amount) => new Franc(amount);
+  static Franc franc(amount) => new Franc(amount, 'CHF');
 }
