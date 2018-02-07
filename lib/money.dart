@@ -1,16 +1,18 @@
 import 'package:tdd_dart/dollar.dart';
 import 'package:tdd_dart/franc.dart';
 
-abstract class Money {
+class Money {
   num amount;
   String currency;
 
   Money(this.amount, this.currency);
 
-  times(num multiplier);
+  times(num multiplier) {
+    return new Money(amount * multiplier, currency);
+  }
 
   bool operator == (Object object) {
-    return (object is Money) && (this.runtimeType == object.runtimeType) && (amount == object.amount);
+    return (object is Money) && (this.currency == object.currency) && (amount == object.amount);
   }
 
   static Money dollar(amount) => new Dollar(amount, 'USD');
